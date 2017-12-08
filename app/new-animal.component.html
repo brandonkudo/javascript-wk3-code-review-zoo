@@ -1,6 +1,5 @@
 <div *ngIf="childShowAnimalForm">
   <p>New Animal</p>
-  <form>
     <input type="text" #newSpecies placeholder="Species">
     <input type="text" #newName placeholder="Name">
     <input type="number" #newAge placeholder="Age">
@@ -9,8 +8,7 @@
     <input type="number" #newCaretakers placeholder="Caretakers">
     <input type="text" #newSex placeholder="Sex">
     <input type="text" #newLikes placeholder="Likes">
-    <input type="text" #newDislikers placeholder="Dislikers">
+    <input type="text" #newDislikes placeholder="Dislikes">
     <button (click)="submitForm(newSpecies.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value)">Submit New Animal</button>
-    <button (click)="exitNewAnimalFormClicked()">Exit</button>    
-  </form>
+    <button (click)="exitNewAnimalFormClicked()">Exit</button>
 </div>

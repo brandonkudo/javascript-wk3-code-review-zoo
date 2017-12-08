@@ -3,15 +3,9 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 
 var lib = require('bower-files')({
-  // "overrides":{
-  //   "bootstrap" : {
-  //     "main": [
-  //       "less/bootstrap.less",
-  //       "dist/css/bootstrap.css",
-  //       "dist/js/bootstrap.js"
-  //     ]
-  //   }
-  // }
+  "overrides":{
+
+  }
 });
 
 var utilities = require('gulp-util');
@@ -80,8 +74,8 @@ gulp.task('serve', ['build'], function() {
     }
   });
   gulp.watch(['resources/js/*.js'], ['jsBuild']); // vanilla js changes, reload.
-  gulp.watch(['*.html'], ['htmlBuild']); // html changes, reload.
-  gulp.watch(['resources/styles/*.css', 'resources/styles/*.scss'], ['cssBuild']);
+  gulp.watch(['*.html', 'app/*.html'], ['htmlBuild']); // html changes, reload.
+  gulp.watch(['resources/css/*.css', 'resources/scss/*.scss'], ['cssBuild']);
   gulp.watch(['app/*.ts'], ['tsBuild']); // typescript files change, compile then reload.
 });
 

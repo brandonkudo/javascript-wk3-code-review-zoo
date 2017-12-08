@@ -35,6 +35,7 @@ export class AppComponent {
   }
 
   addAnimal(newAnimalFromChild: Animal) {
+    console.log("hi");
     this.masterAnimalList.push(newAnimalFromChild);
   }
 }
