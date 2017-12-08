@@ -1,0 +1,20 @@
+<div *ngIf="childSelectedAnimal">
+  <label>{{childSelectedAnimal.species}}</label>
+  <input type="text" [(ngModel)]="childSelectedAnimal.species">
+  <label>{{childSelectedAnimal.name}}</label>
+  <input type="text" [(ngModel)]="childSelectedAnimal.name">
+  <label>{{childSelectedAnimal.age}}</label>
+  <input type="number" [(ngModel)]="childSelectedAnimal.age">
+  <label>{{childSelectedAnimal.diet}}</label>
+  <input type="text" [(ngModel)]="childSelectedAnimal.diet">
+  <label>{{childSelectedAnimal.location}}</label>
+  <input type="text" [(ngModel)]="childSelectedAnimal.location">
+  <label>{{childSelectedAnimal.caretakers}}</label>
+  <input type="number" [(ngModel)]="childSelectedAnimal.caretakers">
+  <label>{{childSelectedAnimal.sex}}</label>
+  <input type="text" [(ngModel)]="childSelectedAnimal.sex">
+  <label>{{childSelectedAnimal.likes}}</label>
+  <input type="text" [(ngModel)]="childSelectedAnimal.likes">
+  <label>{{childSelectedAnimal.dislikes}}</label>
+  <input type="text" [(ngModel)]="childSelectedAnimal.dislikes">
+</div>

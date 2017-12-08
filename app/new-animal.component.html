@@ -9,6 +9,6 @@
     <input type="text" #newSex placeholder="Sex">
     <input type="text" #newLikes placeholder="Likes">
     <input type="text" #newDislikes placeholder="Dislikes">
-    <button (click)="submitForm(newSpecies.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value)">Submit New Animal</button>
+    <button (click)="submitForm(newSpecies.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value)" (click)="exitNewAnimalFormClicked()">Submit New Animal</button>
     <button (click)="exitNewAnimalFormClicked()">Exit</button>
 </div>
