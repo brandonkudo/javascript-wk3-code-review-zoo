@@ -1,2 +1,4 @@
 <h1>Zoo</h1>
+<button (click)="addNewAnimalForm(animalToEdit)">Add Animal</button>
 <animal-list [childAnimalList]="masterAnimalList"></animal-list>
+<new-animal [childShowAnimalForm]="showAnimalForm" (newAnimalSender)="addAnimal($event)" (exitNewAnimalFormClickedSender)="nullAnimalForm()"></new-animal>
