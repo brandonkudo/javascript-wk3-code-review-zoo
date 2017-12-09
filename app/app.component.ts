@@ -25,6 +25,15 @@ export class AppComponent {
   ];
 
   showAnimalForm = null;
+  selectedAnimal = null;
+
+  editAnimal(animalToEdit) {
+    this.selectedAnimal = animalToEdit;
+  }
+
+  nullEdit() {
+    this.selectedAnimal = null;
+  }
 
   addNewAnimalForm(animalToEdit) {
     this.showAnimalForm = !null;
