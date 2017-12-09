@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Karla|Vollkorn+SC');
+@import url('https://fonts.googleapis.com/css?family=Dosis|Karla|Vollkorn+SC');
+
 
 * {
   margin: 0;
@@ -21,7 +22,9 @@ body {
 
 h1 {
   font-size: 80px;
-  font-family: 'Vollkorn SC', serif;
+  font-family: 'Dosis', sans-serif;
+  text-shadow: 1px 1px 50px grey;
+  color: #395134;
 }
 
 .card {
@@ -58,24 +61,37 @@ h1 {
 
 .card-bottom {
   width: 97%;
-  border: 1px solid #7c7c7c;
+  border: 1px solid #7a2121;
   border-top: 0;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(to bottom, #afafaf, #cccccc, #cccccc, #cccccc, #cccccc, #afafaf);
+  background-image: linear-gradient(to bottom, #601a1a, #912727, #912727, #912727, #912727, #601a1a);
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: bold;
+  font-family: helvetica;
+  color: #efe4c6;
+  padding: 3px;
   box-shadow: 1px 10px 40px black;
   &:hover {
-
+    color: white;
+    cursor: pointer;
   }
 }
 
 #add-animal-button {
-  padding: 5px;
+  padding: 15px;
+  background-color: #395134;
+  color: #efe4c6;
+  border: none;
+  font-family: courier;
+  margin-bottom: 10px;
+  &:hover {
+    cursor: pointer;
+    background-color: #912727;
+  }
 }
 
 #edit-animal {
@@ -102,6 +118,14 @@ h1 {
   color: #395134;
 }
 
+.close-button {
+  font-size: 14px;
+  &:hover {
+    color: #912727;
+    cursor: pointer;
+  }
+}
+
 .edit-top {
   display: flex;
   flex-direction: column;
@@ -124,7 +148,7 @@ h1 {
   margin-bottom: 5px;
 }
 
-.edit-bottom-left, .edit-bottom-right {
+.edit-bottom-left, .edit-bottom-right, .form-left, .form-right {
   display: flex;
   flex-direction: column;
   .input-field {
@@ -133,6 +157,7 @@ h1 {
     justify-content: space-between;
   }
 }
+
 
 #new-animal {
   position: fixed;
@@ -157,14 +182,53 @@ h1 {
   background-image: linear-gradient(to bottom, #cec1ad, #efe4c6, #efe4c6, #efe4c6, #efe4c6, #efe4c6, #cec1ad);
   font-family: courier;
   color: #395134;
+  #new-title {
+    margin-bottom: 10px;
+  }
+  .name-field {
+    display: flex;
+    margin-bottom: 5px;
+  }
+  button {
+    padding: 8px;
+    background-color: #395134;
+    color: #efe4c6;
+    font-family: courier;
+    border: none;
+    margin-bottom: 5px;
+    &:hover {
+      background-color: #912727;
+      cursor: pointer;
+    }
+  }
 }
 
 .new-animal-form {
   width: 100%;
   display: flex;
   justify-content: space-around;
+  margin-bottom: 15px;
   .form-left, .form-right {
     display: flex;
     flex-direction: column;
+  }
+}
+
+.red-text {
+  color: #912727;
+}
+
+.select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+select {
+  background-color: #912727;
+  font-family: courier;
+  color: #efe4c6;
+  &:hover {
+    background-color: #395134;
   }
 }

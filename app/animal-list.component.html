@@ -1,12 +1,15 @@
-<select (change)="onChange($event.target.value)">
-  <option value="YoungAnimals">Young Animals</option>
-  <option value="MatureAnimals">Mature Animals</option>
-  <option value="YoungestToOldest">Youngest to Oldest</option>
-  <option value="OldestToYoungest">Oldest to Youngest</option>
-  <option value="CaretakersToMost">Least amount of caretakers</option>
-  <option value="CaretakersToLeast">Most amount of caretakers</option>
-  <option value="ViewAll" selected="selected">View All</option>
-</select>
+<div class="select">
+  <select (change)="onChange($event.target.value)">
+    <option value="YoungAnimals">Young Animals</option>
+    <option value="MatureAnimals">Mature Animals</option>
+    <option value="YoungestToOldest">Youngest to Oldest</option>
+    <option value="OldestToYoungest">Oldest to Youngest</option>
+    <option value="CaretakersToMost">Least amount of caretakers</option>
+    <option value="CaretakersToLeast">Most amount of caretakers</option>
+    <option value="ViewAll" selected="selected">View All</option>
+  </select>
+
+</div>
 <div class="card" *ngFor="let currentAnimal of childAnimalList | agepipe:filterByAge">
   <div class="card-top">
     <div class="card-title">
@@ -14,20 +17,20 @@
     </div>
     <div class="card-body">
       <div class="body-left">
-        <p>Species: {{currentAnimal.species}}</p>
-        <p>Age: {{currentAnimal.age}}</p>
-        <p>Diet: {{currentAnimal.diet}}</p>
-        <p>Location: {{currentAnimal.location}}</p>
+        <p>Species: <span class="red-text">{{currentAnimal.species}}</span></p>
+        <p>Age: <span class="red-text">{{currentAnimal.age}}</span></p>
+        <p>Diet: <span class="red-text">{{currentAnimal.diet}}</span></p>
+        <p>Location: <span class="red-text">{{currentAnimal.location}}</span></p>
       </div>
       <div class="body-right">
-        <p># of Caretakers: {{currentAnimal.caretakers}}</p>
-        <p>Sex: {{currentAnimal.sex}}</p>
-        <p>Likes: {{currentAnimal.likes}}</p>
-        <p>Dislikes: {{currentAnimal.dislikes}}</p>
+        <p># of Caretakers: <span class="red-text">{{currentAnimal.caretakers}}</span></p>
+        <p>Sex: <span class="red-text">{{currentAnimal.sex}}</span></p>
+        <p>Likes: <span class="red-text">{{currentAnimal.likes}}</span></p>
+        <p>Dislikes: <span class="red-text">{{currentAnimal.dislikes}}</span></p>
       </div>
     </div>
   </div>
   <div class="card-bottom" (click)="editButtonHasBeenClicked(currentAnimal)">
-    <p>Edit</p> 
+    <p>Edit</p>
   </div>
 </div>

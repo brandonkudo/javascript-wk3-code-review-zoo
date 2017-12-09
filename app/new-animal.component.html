@@ -1,22 +1,49 @@
 <div *ngIf="childShowAnimalForm" id="new-animal">
   <div class="new-animal">
-    <p>New Animal</p>
-    <input type="text" #newName placeholder="Name">
+    <p id="new-title">New Animal</p>
+    <div class="name-field">
+      <p>Name:</p>
+      <input type="text" #newName placeholder="Name">
+    </div>
     <div class="new-animal-form">
       <div class="form-left">
-        <input type="text" #newSpecies placeholder="Species">
-        <input type="number" #newAge placeholder="Age">
-        <input type="text" #newDiet placeholder="Diet">
-        <input type="text" #newLocation placeholder="Location">
+        <div class="input-field">
+          <p>Species:</p>
+          <input type="text" #newSpecies placeholder="Species">
+        </div>
+        <div class="input-field">
+          <p>Age:</p>
+          <input type="number" #newAge placeholder="Age">
+        </div>
+        <div class="input-field">
+          <p>Diet:</p>
+          <input type="text" #newDiet placeholder="Diet">
+        </div>
+        <div class="input-field">
+          <p>Location:</p>
+          <input type="text" #newLocation placeholder="Location">
+        </div>
       </div>
       <div class="form-right">
-        <input type="number" #newCaretakers placeholder="Caretakers">
-        <input type="text" #newSex placeholder="Sex">
-        <input type="text" #newLikes placeholder="Likes">
-        <input type="text" #newDislikes placeholder="Dislikes">
+        <div class="input-field">
+          <p>Caretakers:</p>
+          <input type="number" #newCaretakers placeholder="Caretakers">
+        </div>
+        <div class="input-field">
+          <p>Sex:</p>
+          <input type="text" #newSex placeholder="Sex">
+        </div>
+        <div class="input-field">
+          <p>Likes:</p>
+          <input type="text" #newLikes placeholder="Likes">
+        </div>
+        <div class="input-field">
+          <p>Dislikes:</p>
+          <input type="text" #newDislikes placeholder="Dislikes">
+        </div>
       </div>
     </div>
     <button (click)="submitForm(newSpecies.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value)" (click)="exitNewAnimalFormClicked()">Submit New Animal</button>
-    <button (click)="exitNewAnimalFormClicked()">Exit</button>
+    <p (click)="exitNewAnimalFormClicked()" class="close-button">Close</p>
   </div>
 </div>
