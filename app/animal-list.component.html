@@ -8,14 +8,26 @@
   <option value="ViewAll" selected="selected">View All</option>
 </select>
 <div class="card" *ngFor="let currentAnimal of childAnimalList | agepipe:filterByAge">
-  <p>{{currentAnimal.species}}</p>
-  <p>{{currentAnimal.name}}</p>
-  <p>{{currentAnimal.age}}</p>
-  <p>{{currentAnimal.diet}}</p>
-  <p>{{currentAnimal.location}}</p>
-  <p>{{currentAnimal.caretakers}}</p>
-  <p>{{currentAnimal.sex}}</p>
-  <p>{{currentAnimal.likes}}</p>
-  <p>{{currentAnimal.dislikes}}</p>
-  <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit</button>
+  <div class="card-top">
+    <div class="card-title">
+      <p>{{currentAnimal.name}}</p>
+    </div>
+    <div class="card-body">
+      <div class="body-left">
+        <p>Species: {{currentAnimal.species}}</p>
+        <p>Age: {{currentAnimal.age}}</p>
+        <p>Diet: {{currentAnimal.diet}}</p>
+        <p>Location: {{currentAnimal.location}}</p>
+      </div>
+      <div class="body-right">
+        <p># of Caretakers: {{currentAnimal.caretakers}}</p>
+        <p>Sex: {{currentAnimal.sex}}</p>
+        <p>Likes: {{currentAnimal.likes}}</p>
+        <p>Dislikes: {{currentAnimal.dislikes}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="card-bottom">
+    <p (click)="editButtonHasBeenClicked(currentAnimal)">Edit</p> 
+  </div>
 </div>
