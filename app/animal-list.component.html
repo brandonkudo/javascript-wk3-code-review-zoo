@@ -2,6 +2,9 @@
   <option value="YoungAnimals">Young Animals</option>
   <option value="MatureAnimals">Mature Animals</option>
   <option value="YoungestToOldest">Youngest to Oldest</option>
+  <option value="OldestToYoungest">Oldest to Youngest</option>
+  <option value="CaretakersToMost">Least amount of caretakers</option>
+  <option value="CaretakersToLeast">Most amount of caretakers</option>
   <option value="ViewAll" selected="selected">View All</option>
 </select>
 <div class="card" *ngFor="let currentAnimal of childAnimalList | agepipe:filterByAge">

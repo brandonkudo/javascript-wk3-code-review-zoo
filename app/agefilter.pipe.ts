@@ -37,6 +37,23 @@ export class AgePipe implements PipeTransform {
       })
       return output;
 
+    } else if (desiredSort === "OldestToYoungest") {
+      input.sort(function(a: Animal, b: Animal) {
+        return b.age-a.age
+      })
+      return output;
+
+    } else if (desiredSort === "CaretakersToMost") {
+      input.sort(function(a: Animal, b: Animal) {
+        return a.caretakers-b.caretakers
+      })
+      return output;
+    } else if (desiredSort === "CaretakersToLeast") {
+      input.sort(function(a: Animal, b: Animal) {
+        return b.caretakers-a.caretakers
+      })
+      return output;
+      
     } else {
       return input;
     }
