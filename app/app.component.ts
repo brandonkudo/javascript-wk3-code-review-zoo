@@ -19,8 +19,8 @@ export class AppComponent {
   public dislikes: string
 
   public masterAnimalList: Animal[] = [
-    new Animal('Dog', 'Brandon', 0, 'Carnivore', 'Santa Monica', 2, 'Male', 'Food', 'Bees'),
-    new Animal('Cat', 'Taylor', 2, 'Vegeterian', 'Portland', 4, 'Female', 'Cats', 'Alfredo'),
+    new Animal('Dog', 'Brandon', 2, 'Carnivore', 'Santa Monica', 2, 'Male', 'Food', 'Bees'),
+    new Animal('Cat', 'Taylor', 0, 'Vegeterian', 'Portland', 4, 'Female', 'Cats', 'Alfredo'),
     new Animal('Bird', 'Eric', 3, 'Carnivore', 'Tualatin', 3, 'Male', 'Stuff', 'Bees'),
   ];
 

@@ -1,6 +1,7 @@
 <select (change)="onChange($event.target.value)">
   <option value="YoungAnimals">Young Animals</option>
   <option value="MatureAnimals">Mature Animals</option>
+  <option value="YoungestToOldest">Youngest to Oldest</option>
   <option value="ViewAll" selected="selected">View All</option>
 </select>
 <div class="card" *ngFor="let currentAnimal of childAnimalList | agepipe:filterByAge">
