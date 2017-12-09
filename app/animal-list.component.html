@@ -1,4 +1,9 @@
-<div class="card" *ngFor="let currentAnimal of childAnimalList">
+<select (change)="onChange($event.target.value)">
+  <option value="YoungAnimals">Young Animals</option>
+  <option value="MatureAnimals">Mature Animals</option>
+  <option value="ViewAll" selected="selected">View All</option>
+</select>
+<div class="card" *ngFor="let currentAnimal of childAnimalList | agepipe:filterByAge">
   <p>{{currentAnimal.species}}</p>
   <p>{{currentAnimal.name}}</p>
   <p>{{currentAnimal.age}}</p>
