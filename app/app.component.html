@@ -1,7 +1,7 @@
 <div class="container">
   <h1>Zoo</h1>
-  <button (click)="addNewAnimalForm(animalToEdit)">Add Animal</button>
+  <button id="add-animal-button" (click)="addNewAnimalForm(animalToEdit)">Add Animal</button>
   <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
   <edit-animal [childSelectedAnimal]="selectedAnimal" (closeButtonClickedSender)="nullEdit()"></edit-animal>
-  <new-animal [childShowAnimalForm]="showAnimalForm" (newAnimalSender)="addAnimal($event)" (exitNewAnimalFormClickedSender)="nullAnimalForm()"></new-animal>  
+  <new-animal [childShowAnimalForm]="showAnimalForm" (newAnimalSender)="addAnimal($event)" (exitNewAnimalFormClickedSender)="nullAnimalForm()"></new-animal>
 </div>

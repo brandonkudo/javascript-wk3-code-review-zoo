@@ -1,21 +1,50 @@
-<div *ngIf="childSelectedAnimal">
-  <p>Edit Animal</p>
-  <label>{{childSelectedAnimal.species}}</label>
-  <input type="text" [(ngModel)]="childSelectedAnimal.species">
-  <label>{{childSelectedAnimal.name}}</label>
-  <input type="text" [(ngModel)]="childSelectedAnimal.name">
-  <label>{{childSelectedAnimal.age}}</label>
-  <input type="number" [(ngModel)]="childSelectedAnimal.age">
-  <label>{{childSelectedAnimal.diet}}</label>
-  <input type="text" [(ngModel)]="childSelectedAnimal.diet">
-  <label>{{childSelectedAnimal.location}}</label>
-  <input type="text" [(ngModel)]="childSelectedAnimal.location">
-  <label>{{childSelectedAnimal.caretakers}}</label>
-  <input type="number" [(ngModel)]="childSelectedAnimal.caretakers">
-  <label>{{childSelectedAnimal.sex}}</label>
-  <input type="text" [(ngModel)]="childSelectedAnimal.sex">
-  <label>{{childSelectedAnimal.likes}}</label>
-  <input type="text" [(ngModel)]="childSelectedAnimal.likes">
-  <label>{{childSelectedAnimal.dislikes}}</label>
-  <input type="text" [(ngModel)]="childSelectedAnimal.dislikes">
+<div *ngIf="childSelectedAnimal" id="edit-animal">
+  <div class="edit-animal">
+    <div class="edit-top">
+      <p id="edit-title">Edit Animal</p>
+      <div class="input-field">
+        <p>Name:</p>
+        <input type="text" [(ngModel)]="childSelectedAnimal.name" placeholder="{{childSelectedAnimal.name}}">
+      </div>
+    </div>
+    <div class="edit-bottom">
+      <div class="edit-bottom-left">
+        <div class="input-field">
+          <p>Species:</p>
+          <input type="text" [(ngModel)]="childSelectedAnimal.species" placeholder="{{childSelectedAnimal.species}}">
+        </div>
+        <div class="input-field">
+          <p>Age:</p>
+          <input type="number" [(ngModel)]="childSelectedAnimal.age" placeholder="{{childSelectedAnimal.age}}">
+        </div>
+        <div class="input-field">
+          <p>Diet:</p>
+          <input type="text" [(ngModel)]="childSelectedAnimal.diet" placeholder="{{childSelectedAnimal.diet}}">
+        </div>
+        <div class="input-field">
+          <p>Location:</p>
+          <input type="text" [(ngModel)]="childSelectedAnimal.location" placeholder="{{childSelectedAnimal.location}}">
+        </div>
+      </div>
+      <div class="edit-bottom-right">
+        <div class="input-field">
+          <p>Caretakers:</p>
+          <input type="number" [(ngModel)]="childSelectedAnimal.caretakers" placeholder="{{childSelectedAnimal.caretakers}}">
+        </div>
+        <div class="input-field">
+          <p>Sex:</p>
+          <input type="text" [(ngModel)]="childSelectedAnimal.sex" placeholder="{{childSelectedAnimal.sex}}">
+        </div>
+        <div class="input-field">
+          <p>Likes:</p>
+          <input type="text" [(ngModel)]="childSelectedAnimal.likes" placeholder="{{childSelectedAnimal.likes}}">
+        </div>
+        <div class="input-field">
+          <p>Dislikes:</p>
+          <input type="text" [(ngModel)]="childSelectedAnimal.dislikes" placeholder="{{childSelectedAnimal.dislikes}}">
+        </div>
+      </div>
+    </div>
+    <p (click)="closeButtonClicked()">Close</p>
+  </div>
 </div>

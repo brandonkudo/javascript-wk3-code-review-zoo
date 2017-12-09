@@ -1,14 +1,22 @@
-<div *ngIf="childShowAnimalForm">
-  <p>New Animal</p>
-    <input type="text" #newSpecies placeholder="Species">
+<div *ngIf="childShowAnimalForm" id="new-animal">
+  <div class="new-animal">
+    <p>New Animal</p>
     <input type="text" #newName placeholder="Name">
-    <input type="number" #newAge placeholder="Age">
-    <input type="text" #newDiet placeholder="Diet">
-    <input type="text" #newLocation placeholder="Location">
-    <input type="number" #newCaretakers placeholder="Caretakers">
-    <input type="text" #newSex placeholder="Sex">
-    <input type="text" #newLikes placeholder="Likes">
-    <input type="text" #newDislikes placeholder="Dislikes">
+    <div class="new-animal-form">
+      <div class="form-left">
+        <input type="text" #newSpecies placeholder="Species">
+        <input type="number" #newAge placeholder="Age">
+        <input type="text" #newDiet placeholder="Diet">
+        <input type="text" #newLocation placeholder="Location">
+      </div>
+      <div class="form-right">
+        <input type="number" #newCaretakers placeholder="Caretakers">
+        <input type="text" #newSex placeholder="Sex">
+        <input type="text" #newLikes placeholder="Likes">
+        <input type="text" #newDislikes placeholder="Dislikes">
+      </div>
+    </div>
     <button (click)="submitForm(newSpecies.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value)" (click)="exitNewAnimalFormClicked()">Submit New Animal</button>
     <button (click)="exitNewAnimalFormClicked()">Exit</button>
+  </div>
 </div>
